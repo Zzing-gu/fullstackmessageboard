@@ -1,5 +1,5 @@
 const monk = require('monk');
-const connectionString = 'localhost/messageboard';
+const connectionString = process.env.MONGODB_URL || 'localhost/messageboard';
 const db = monk(connectionString);
 
 module.exports = db;
